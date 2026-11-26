@@ -25,7 +25,7 @@ CREATE TABLE rooms (
 CREATE TABLE guests (
   guest_id                 INT AUTO_INCREMENT PRIMARY KEY,
   guest_no                 VARCHAR(20)  NOT NULL UNIQUE CHECK (guest_no REGEXP '^G-[0-9]{4,}$'),
-  first_name               VARCHAR(50)  NOT NULL,
+  first_name              VARCHAR(50)  NOT NULL,
   last_name                VARCHAR(50)  NOT NULL,
   contact_no               VARCHAR(20)  NOT NULL CHECK (contact_no REGEXP '^(09|[+]639)[0-9]{9}$'),
   email                    VARCHAR(100) CHECK (email IS NULL OR email = '' OR email REGEXP '^[^ @]+@[^ @]+[.][^ @]+$'),
